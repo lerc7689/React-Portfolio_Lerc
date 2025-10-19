@@ -7,7 +7,7 @@ const Carousel = ({ projects }) => {
   const trackRef = useRef<HTMLDivElement>(null);
   const animationRef = useRef<number | null>(null);
 
-  const speed = 1.5; // velocidad px/frame
+  const speed = 1; // velocidad px/frame
   const pauseTime = 2000; // pausa al hacer clic
   const duplicatedProjects = [...projects, ...projects]; // duplicamos para loop
 

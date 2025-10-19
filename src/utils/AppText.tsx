@@ -41,12 +41,12 @@ export const AppText = {
   },
     //Portfolio
   Portfolio: {
-      title: ["Mis Proyectos", "My Projects"],
-      subtitle:["Algunos de Nuestros Trabajos", "Our Latest Work"]
+      title: ["Desarrollos Personales", "Personal Developments"],
+      subtitle:["Proyectos Interactivos", "Interactive Projects"]
   },
   //Other projects
   otherProjects: {
-      title: ["Otros Proyectos", "Other Projects"],
+      title: ["Proyectos Profesionaless", "Professional Projects"],
       subtitle:["Imágenes de Otros Trabajos", "Images of Other Works"]
   },
     //Contact me
