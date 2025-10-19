@@ -79,6 +79,7 @@ const Carousel = ({ projects }) => {
                 <a href={proj.demo} target="_blank" rel="noreferrer">
                   <p>Demo</p>
                 </a>
+                <h4 className="carouselOverlay-tech">{proj.tech}</h4>
               </div>
             </div>
           ))}

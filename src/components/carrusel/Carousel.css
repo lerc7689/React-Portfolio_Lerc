@@ -63,10 +63,14 @@
   align-items: center;
   opacity: 0;
   transition: 0.5s;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 .carouselOverlay a {
   text-decoration: none;
+}
+.carouselOverlay-tech{
+    color: #fca311;
+
 }
 .carouselOverlay p {
   padding: 5px 15px;
