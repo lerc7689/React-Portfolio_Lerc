@@ -180,6 +180,7 @@
   .downloadCV {
     width: 120px;
     height: 40px;
+    bottom: 4rem;
   }
 
   .downloadCV a {
@@ -206,7 +207,6 @@
   .downloadCV {
     width: 130px;
     height: 30px;
-    padding-top: 5px;
   }
 
   .downloadCV a {

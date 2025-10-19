@@ -15,6 +15,10 @@
   opacity: 1;
 }
 
+.titlesContainer{
+  /* background-color: red; */
+  text-align: center;
+}
 .skillsTitle {
   font-size: 25px;
   color: var(--primary-yellow);
@@ -46,6 +50,10 @@
 }
 
 @media (min-width: 320px) and (max-width: 617px) {
+
+  .skillsGLobalContainer {
+    opacity: 1;
+  }
 
   .skillsTitle {
     font-size: 30px;
