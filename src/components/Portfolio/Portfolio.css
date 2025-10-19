@@ -1,5 +1,4 @@
 .portfolio {
-  /* margin: 40px; */
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@
   position: relative;
   opacity: 0;
   transition: opacity 0.5s, transform 1s;
-  /* transform: translateX(100px); */
 }
 .show {
   opacity: 1;
@@ -16,146 +14,11 @@
 }
 
 .portfolioTitle {
-  font-size: 40px;
-}
-
-.portfolioGeneralImgesContainer {
-  width: 80vw;
+  font-size: 25px;
+  color: var(--primary-yellow);
   display: flex;
-  overflow-x: scroll;
-  /*justify-content: center; */
-  align-content: center;
-  gap: 20px;
-  padding: 50px;
-  border-radius: 10px;
-  background-color: rgb(5, 5, 36);
-  scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-.portfolioSingleImgContainer {
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  min-width: 350px;
-  min-height: 200px;
-  border-radius: 10px;
-  background-color: rgba(87, 92, 86, 0.548);
-  position: relative;
-  overflow: hidden;
-}
-
-.portfolioSingleImgContainer img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  transition: 0.5s;
-  position: relative;
-}
-
-.portfolioSingleImgText {
-  /* border-radius: 10px; */
-  padding: 5px;
-  position: absolute;
-  font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.692);
-  top: -100%;
-}
-
-.portfolioSingleImgText p {
-  padding: 5px;
-  border-radius: 15px;
-  background-color: transparent;
-  border: 2px solid #fca311;
-  color: #fca311;
-  transition: 0.5s;
-}
-
-.portfolioSingleImgText p:hover {
-  background-color: #fca311;
-  color: black;
-  transition: 0.5s;
-}
-.portfolioSingleImgText p:hover i {
-  color: black;
-}
-
-.portfolioSingleImgText p:active {
-  background-color: #c98415;
-}
-.portfolioSingleImgText a {
-  text-decoration: none;
-}
-
-.portfolioSingleImgContainer:hover .portfolioSingleImgText {
-  opacity: 1;
-  /* background-color: rgba(0, 0, 0, 0.692); */
-  top: 0;
-}
-
-.backBtn,
-.nextBtn {
-  padding: 10px;
-  border-radius: 10px;
-  border: none;
-  background-color: rgb(5, 5, 36);
-  position: absolute;
-  transition: 0.5s;
-}
-
-.backBtn {
-  left: 65px;
-  top: 200px;
-  z-index: 5;
-}
-
-.nextBtn {
-  right: 65px;
-  top: 200px;
-  z-index: 5;
-}
-
-.backBtn i,
-.nextBtn i {
-  font-size: 40px;
-  transition: 0.5s;
-}
-
-.backBtn:hover i,
-.nextBtn:hover i {
-  color: rgb(5, 5, 36);
-  transition: 0.5s;
-}
-
-.backBtn:hover,
-.nextBtn:hover {
-  background-color: #fca311;
-  /* color: rgb(5, 5, 36); */
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.backBtn:active,
-.nextBtn:active {
-  background-color: rgb(5, 5, 36);
-}
-
-.backBtn:active i,
-.nextBtn:active i {
-  color: #fca311;
 }
 
 @media (min-width: 320px) and (max-width: 617px) {
@@ -170,43 +33,6 @@
   .portfolioTitle {
     font-size: 30px;
   }
-
-  .portfolioGeneralImgesContainer {
-    padding: 10px;
-    width: 85%;
-    gap: 20px;
-    /* background-color: rgb(5, 5, 36); */
-    /* padding-left: 1700px; */
-  }
-  .portfolioSingleImgContainer {
-    /* width: 300px; */
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center;
-        min-width: 350px;
-        min-height: 200px;
-        border-radius: 10px;
-        background-color: rgba(87, 92, 86, 0.548);
-        position: relative;
-        overflow: hidden; */
-    min-width: 260px;
-    min-height: 180px;
-  }
-
-  .backBtn {
-    left: 10px;
-    top: 160px;
-  }
-
-  .nextBtn {
-    right: 10px;
-    top: 160px;
-  }
-
-  .backBtn i,
-  .nextBtn i {
-    font-size: 15px;
-  }
 }
 
 @media (min-width: 618px) and (max-width: 980px) {
@@ -217,25 +43,5 @@
 
   .portfolioTitle {
     font-size: 30px;
-  }
-
-  .portfolioGeneralImgesContainer {
-    padding: 10px;
-    width: 70%;
-  }
-
-  .backBtn {
-    left: 55px;
-    top: 160px;
-  }
-
-  .nextBtn {
-    right: 55px;
-    top: 160px;
-  }
-
-  .backBtn i,
-  .nextBtn i {
-    font-size: 15px;
   }
 }

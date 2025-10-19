@@ -1,37 +1,61 @@
 import "./Skills.css";
 import htmlImg from "../../assets/img/html.png"
-import cssImg from "../../assets/img/css.png"
-import jsImg from "../../assets/img/java.png"
-import reactImg from "../../assets/img/react.png"
-import reactRouterImg from "../../assets/img/router.png"
-import reactReduxImg from "../../assets/img/redux.png"
-import gitImg from "../../assets/img/git.png"
-import gitHubImg from "../../assets/img/gitHub.png"
-import nodeJsImg from "../../assets/img/node.png"
-import expressJsImg from "../../assets/img/express-js.png"
-import postgresJsImg from "../../assets/img/postgresql.png"
-import mongoDBJsImg from "../../assets/img/mongoDB.jpg"
+import { useApp } from "../../context/AppContext";
+import { AppText } from "../../utils/AppText";
+import LinearWithValueLabel from "../progressBar/ProgressBar";
+import JobTimeline from "../jobExperiencetimeLine/JobTimeline";
+ 
+  const Skills = () =>{
+    const {language} = useApp()
 
-const Skills = () =>{
     return(
     <>
       <a name="skills"></a>
         <section className="skillsGLobalContainer" id="skills">
-          <h2 className="skillsTitle">My Skills</h2>
-          <div className="skillsContainer">
-            <div className="ImgContainer"><p className="textBehind">Html</p><img  src={htmlImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">Css</p><img src={cssImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">Js</p><img src={jsImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">React</p><img src={reactImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">Router</p><img src={reactRouterImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">Redux</p><img src={reactReduxImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">Git</p><img src={gitImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">GitHub</p><img src={gitHubImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">NodeJs</p><img src={nodeJsImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">Express</p><img src={expressJsImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">Postgres</p><img src={postgresJsImg} alt="" /></div>
-            <div className="ImgContainer"><p className="textBehind">MongoDB</p><img src={mongoDBJsImg} alt="" /></div>
+          <div className="titlesContainer">
+            <h3 className="skillsTitle">
+            <i className="fa-solid fa-minus minusIcon"></i>
+              {AppText.mySkills.title[language]}
+            <i className="fa-solid fa-minus minusIcon"></i>
+            </h3>
+            <h2 className="questionsTitle">{AppText.mySkills.subtitle[language]}</h2>
           </div>
+          
+
+          <div className="skills-bars-full-container">
+
+            <div className="skills-bars-single-container">
+              <JobTimeline/>
+            </div>
+            <div className="skills-bars-single-container">
+
+              <h2 className="skills-bars-single-title">{AppText.mySkills.frontendTitle[language]}</h2>
+
+              <LinearWithValueLabel stopAt={95} titulo="Html"  iconSrc={htmlImg}/>
+              <LinearWithValueLabel stopAt={95} titulo="Css"/>
+              <LinearWithValueLabel stopAt={90} titulo="Javascript"/>
+              <LinearWithValueLabel stopAt={90} titulo="Typescript"/>
+              <LinearWithValueLabel stopAt={90} titulo="React"/>
+              <LinearWithValueLabel stopAt={80} titulo="React Native"/>
+              <LinearWithValueLabel stopAt={70} titulo="Angular"/>
+              <LinearWithValueLabel stopAt={60} titulo="Vue"/>
+              <LinearWithValueLabel stopAt={80} titulo="Git/Github"/>
+
+            </div>
+
+            <div className="skills-bars-single-container" >
+
+               <h2 className="skills-bars-single-title">{AppText.mySkills.backendTitle[language]}</h2>
+
+              <LinearWithValueLabel stopAt={50}  titulo=".Net"/>
+              <LinearWithValueLabel stopAt={55} titulo="Node"/>
+              <LinearWithValueLabel stopAt={70} titulo="SQL"/>
+              <LinearWithValueLabel stopAt={60} titulo="Express"/>
+              <LinearWithValueLabel stopAt={65} titulo="Mongo DB"/>
+              <LinearWithValueLabel stopAt={65} titulo="Postgress DB"/>
+
+            </div>
+          </div>  
         </section>
     </>)
 }

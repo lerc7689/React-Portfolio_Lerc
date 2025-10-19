@@ -1,14 +1,17 @@
 import "./Home.css";
 import homeImgContainer from "../../assets/img/homeImg.png";
+import { AppText } from "../../utils/AppText";
+import { useApp } from "../../context/AppContext";
 
 const Home = () => {
+   const {language} = useApp()
   return (
     <>
       <a name="home"></a>
       <div className="homeContainer" id="home">
         <div className="downloadCV">
-          <a href="./src/assets/LuisRamirezCV.pdf" download="Luis Ramirez CV">
-            Download CV <br />
+          <a href="./src/assets/LuisRamirezCV.pdf" download="Luis Ramirez CV" className="">
+            {AppText.Home.downloadCVTitle[language]} <br />
             <br />
             <i className="fa-solid fa-angles-down"></i>
           </a>
@@ -19,12 +22,10 @@ const Home = () => {
             <img src={homeImgContainer} alt="" />
           </div>
           <h1>
-            HEY, <span>I'M LUIS RAMIREZ</span>
+            HEY, <span>{AppText.Home.salutation[language]} LUIS RAMIREZ</span>
           </h1>
           <p className="homeAnimation">
-            A focused Web Developer building the backend and the Frontend of
-            Websites and Web Applications that leads to the success of the
-            overall product.
+            {AppText.Home.message[language]}
           </p>
         </div>
       </div>

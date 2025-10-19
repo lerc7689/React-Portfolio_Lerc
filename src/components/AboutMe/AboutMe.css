@@ -1,30 +1,29 @@
 .aboutMeContainer {
-  width: 90vw;
+  width: 80vw;
   position: relative;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   gap: 70px;
   margin-left: 5%;
-  margin-bottom: 80px;
-  /* background-color: aqua; */
   opacity: 0;
   transition: opacity 0.5s;
+  margin-bottom: 80px;
 }
 .show {
   opacity: 1;
 }
 
+.titlesContainer{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .imgContainer {
   width: 400px;
-  /* height: 300px; */
-  /* margin-bottom: 50px; */
-  /* scroll-margin-top: 100vh; */
   opacity: 0;
   transition: opacity 0.5s;
-  /* border-radius: 50%;
-    overflow: hidden; */
 }
 
 .visible_imgContainer {
@@ -50,13 +49,10 @@
 }
 
 .AboutMeInfoContainer {
-  /* border: 5px solid #fca311; */
   border-radius: 10px;
   width: 40vw;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* background-color: white; */
   padding: 15px;
-  /* color: black; */
 }
 
 .visible_AboutMeInfoContainer {
@@ -72,27 +68,17 @@
   }
 }
 
-.aboutMeMessage {
-  font-family: Poppins, sans-serif;
-  text-align: justify;
-  font-size: larger;
-}
-
 .aboutMeList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: start;
-  gap: 15px;
-  margin-top: 20px;
-  /* color: black; */
+  gap: 5px;
+  margin-top: 10px;
 }
 
 .aboutMeList li {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .aboutMeList li b {
@@ -113,16 +99,14 @@
     font-size: 15px;
   }
   .aboutMeList {
-    /* justify-content: start; */
   }
 }
 
 @media (min-width: 618px) and (max-width: 980px) {
   .aboutMeContainer {
-    /* margin-bottom: 60px; */
     flex-direction: column;
   }
-  /* .aboutMeList {
-    justify-content: start;
-  } */
+  .AboutMeInfoContainer{
+    width: 80vw;    
+  }
 }

@@ -1,122 +1,70 @@
 .skillsGLobalContainer {
-  background-color: rgba(122, 122, 122, 0.199);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  /* padding: 50px; */
-  /* padding-left: 160px;
-    padding-right: 160px; */
-  padding-top: 80px;
-  padding-bottom: 80px;
-  margin-bottom: 80px;
+  gap: 20px;
+  padding-bottom: 30px;
   opacity: 0;
   transition: opacity 0.5s, transform 1s;
   transform: translateY(10px);
+  /* background-color: red; */
 }
 .show {
   opacity: 1;
-  transform: translateY(0px);
-}
-.skillsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
-  width: 80%;
-  background-color: rgb(18, 18, 58);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: inset 0 0 10px rgb(255, 255, 255);
-  box-shadow: 0 0 20px 5px rgb(85, 84, 84);
 }
 
 .skillsTitle {
-  font-size: 80px;
-}
-
-.ImgContainer {
-  background-color: white;
-  width: 130px;
-  height: 130px;
-  transition: 0.5s;
-  border-radius: 50%;
+  font-size: 25px;
+  color: var(--primary-yellow);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.textBehind {
-  font-size: 20px;
-  font-weight: 600;
-  position: absolute;
-  z-index: 0;
+.skills-bars-full-container{
+  display: flex;
+  gap: 1rem;
 }
 
-.ImgContainer img {
-  max-width: 70%;
-  max-height: 70%;
-  position: relative;
-  background-color: white;
-  transition: 0.5s;
+.skills-bars-single-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  padding: 1rem;
+  border-radius: 20px;
+  width: 30vw;
 }
 
-.ImgContainer:hover {
-  border: 20px solid #fca311;
-  /* width: 140px;
-    height: 140px; */
-  transition: 0.5s;
-}
-
-.ImgContainer:hover img {
-  opacity: 0;
-  /* -webkit-transition: opacity 1500ms;
-    -moz-transition: opacity 1500ms;
-    -o-transition: opacity 1500ms;
-    -ms-transition: opacity 1500ms;
-    transition: opacity 1500ms; */
+.skills-bars-single-title{
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 34px;
+  color: rgb(174, 175, 175);
 }
 
 @media (min-width: 320px) and (max-width: 617px) {
-  .skillsGlobalContainer {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 60px;
-    padding: 5px;
-  }
-
-  .skillsContainer {
-    gap: 20px;
-    /* width: 100%; */
-  }
 
   .skillsTitle {
     font-size: 30px;
   }
 
-  .ImgContainer {
-    width: 70px;
-    height: 70px;
+  .skills-bars-full-container{
+    flex-direction: column;
   }
-
-  .ImgContainer:hover {
-    width: 75px;
-    height: 75px;
+  .skills-bars-single-title{
+    font-size: 18px !important;
   }
-
-  .textBehind {
-    font-size: 10px;
-  }
-  .ImgContainer:hover {
-    border: 10px solid #fca311;
+  .skills-bars-single-container{
+    width: 80vw;
   }
 }
 
 @media (min-width: 618px) and (max-width: 980px) {
   .skillsTitle {
-    font-size: 50px;
+    font-size: 30px;
   }
 
   .ImgContainer {

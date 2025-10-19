@@ -1,96 +1,61 @@
 import { useEffect, useState } from "react";
+import spainFlag from "../../assets/img/webp/spainFlagIcon.webp";
+import usaFlag from "../../assets/img/webp/usaFlagIcon.webp";
 import "./NavBar.css";
+import { useApp } from "../../context/AppContext";
+import { AppText } from "../../utils/AppText";
 
 const NavBar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  // const sunIcon = document.getElementById('sun')
-  // const moonIcon = document.getElementById('moon')
-
+  const {language, toggleLanguage} = useApp()
+ 
+    
+    
   const darkMode = () => {
     document.body.classList.toggle("darkMode");
-    setIsDarkMode(!isDarkMode);
-    /*
-        console.log(sunIcon)
-        sunIcon?.classList.add('prueba')
-        // console.log(sunIcon.classList.contains("[fa-sun]"))
-        if(isDarkMode){
-            // console.log(moonIcon.classList.contains('fa-moon'))
-            // if(moonIcon.classList.contains('prueba')){
-
-            //     moonIcon.classList.remove('prueba')
-            // }
-            // sunIcon.classList.add('prueba')
-        }else{
-            console.log("FALSE")
-            // if(sunIcon.classList.contains('prueba')){
-
-            //     sunIcon.classList.remove('prueba')
-            // }
-            // moonIcon.classList.add('prueba')
-        }
-        */
+    setIsDarkMode(!isDarkMode); 
   };
 
-  window.addEventListener("scroll", function () {
-    var header = document.getElementById("header");
-    var i = document.getElementsByTagName("a");
-    var barOptions = document.getElementsByClassName("visually");
-    var headerList = this.document.getElementById("headerList");
-    var scrollPosition = window.scrollY;
-    var threshold = window.innerHeight; // 100vh
+      // 👇 Manejo del scroll y del header
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.getElementById("header");
+      const headerList = document.getElementById("headerList");
+      const barOptions = document.getElementsByClassName("visually");
+      const links = document.getElementsByTagName("a");
 
-    if (scrollPosition >= threshold) {
-      header.classList.add("ShortHeaderContainer");
-      headerList.classList.add("shortHeaderList");
+      if (!header || !headerList) return;
 
-      for (let index = 0; index < i.length; index++) {
-        barOptions[index]?.classList.add("hidden");
+      const scrollPosition = window.scrollY;
+      const threshold = window.innerHeight * 0.9; // 90% de la pantalla
+
+      if (scrollPosition >= threshold) {
+        header.classList.add("ShortHeaderContainer");
+        headerList.classList.add("shortHeaderList");
+        header.classList.add("hideSign");
+
+        for (let index = 0; index < barOptions.length; index++) {
+          barOptions[index]?.classList.add("hidden");
+        }
+      } else {
+        header.classList.remove("ShortHeaderContainer");
+        headerList.classList.remove("shortHeaderList");
+
+        for (let index = 0; index < links.length; index++) {
+          links[index].style.color = "white";
+          barOptions[index]?.classList.remove("hidden");
+        }
       }
-    } else {
-      header.classList.remove("ShortHeaderContainer");
-      headerList.classList.remove("shortHeaderList");
+    };
 
-      for (let index = 0; index < i.length; index++) {
-        i[index].style.color = "white";
-        barOptions[index]?.classList.remove("hidden");
-      }
-    }
-    ///
+    window.addEventListener("scroll", handleScroll);
 
-    const sections = document.querySelectorAll(
-      ".homeContainer, .aboutMeContainer, .skillsGLobalContainer, .portfolio, .contactMeContainer"
-    );
-    const navLinks = document.querySelectorAll(".headerOption");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            const targetId = entry.target.getAttribute("id");
-            // console.log(targetId);
-
-            navLinks.forEach((link) => {
-              if (link.getAttribute("href") === `#${targetId}`) {
-                link.classList.add("active");
-              } else {
-                link.classList.remove("active");
-              }
-            });
-          } else {
-            entry.target.classList.remove("show");
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    ///
-  });
+    // 🧹 Limpieza del evento
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+ 
 
   useEffect(() => {
     const sections = document.querySelectorAll(
@@ -104,7 +69,6 @@ const NavBar = () => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
             const targetId = entry.target.getAttribute("id");
-            // console.log(targetId);
 
             navLinks.forEach((link) => {
               if (link.getAttribute("href") === `#${targetId}`) {
@@ -128,12 +92,15 @@ const NavBar = () => {
   return (
     <>
       <div id="header" className="headerContainer">
+        <div>
+          <p className="navBar-myName visually">Lerc</p>
+        </div>
         <ul className="headerList" id="headerList">
           <a href="#home" className="headerOption">
             <li>
               <i className="fa-solid fa-house-user"></i>{" "}
               <span id="span" className="visually">
-                Home
+                {AppText.Navbar.home[language]}
               </span>
             </li>
           </a>
@@ -141,7 +108,7 @@ const NavBar = () => {
             <li>
               <i className="fa-solid fa-address-card"></i>{" "}
               <span id="span" className="visually">
-                About me
+                {AppText.Navbar.aboutMe[language]}
               </span>
             </li>
           </a>
@@ -149,7 +116,7 @@ const NavBar = () => {
             <li>
               <i className="fa-solid fa-code"></i>{" "}
               <span id="span" className="visually">
-                Skills
+                {AppText.Navbar.skills[language]}
               </span>
             </li>
           </a>
@@ -157,19 +124,32 @@ const NavBar = () => {
             <li>
               <i className="fa-solid fa-briefcase"></i>{" "}
               <span id="span" className="visually">
-                Projects
+                {AppText.Navbar.projects[language]}
               </span>
             </li>
           </a>
           <a href="#contactMe" className="headerOption">
             <li>
-              <i className="fa-solid fa-mobile-screen"></i>{" "}
+              <i className="fa-solid fa-mobile-screen"></i>{" "}              
               <span id="span" className="visually">
-                Contact me
+                {AppText.Navbar.contactMe[language]}
               </span>
             </li>
           </a>
+
           <div className="headerOption">
+            {language === 1 ? (
+                <li>
+                  <img src={spainFlag} alt="spain_flag" className="flagIcon" onClick={()=> toggleLanguage()}/>
+                </li>
+            ) : (
+                <li>
+                  <img src={usaFlag} alt="usa_flag" className="flagIcon" onClick={()=> toggleLanguage()}/>
+                </li>
+            )}
+          </div>
+          <div className="headerOption">
+
             {isDarkMode === true ? (
               <>
                 <li>

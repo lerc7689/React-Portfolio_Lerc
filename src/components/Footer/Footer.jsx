@@ -1,6 +1,10 @@
 import "./Footer.css";
+import { AppText } from "../../utils/AppText";
+import { useApp } from "../../context/AppContext";
 
 const Footer = () =>{
+    const {language} = useApp();
+
     return(
     <>
         <div className="FooterContainer">
@@ -11,12 +15,12 @@ const Footer = () =>{
                     <span className="r">r</span>
                     <span className="c">c</span>
                 </h2>
-                <p>Copyright 2023</p>
-                <p>All Rights Reserved</p>
+                <p>{AppText.Footer.CopyRightTitle[language]}</p>
+                <p>{AppText.Footer.AllRightsReserved[language]}</p>
             </div>
             
             <div className="socialMediaContainer">
-                <h3>Social Media</h3>
+                <h3>{AppText.Footer.SocialMediaTitle[language]}</h3>
                 <div className="socialMediaIconsContainer"> 
                     <a className="icon-link" href="https://www.instagram.com/lerc7689/?next=%2F">
                         <i className="fa-brands fa-instagram"><div className="insideEffect"></div></i>

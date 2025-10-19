@@ -1,8 +1,13 @@
 import "./AboutMe.css";
 import aboutMeImg from "../../assets/img/imgAboutMe.jpeg";
-// import { useEffect } from "react";
+import { useApp } from "../../context/AppContext";
+import { AppText } from "../../utils/AppText";
 
 const AboutMe = () => {
+
+  const {language} = useApp()
+
+
   window.addEventListener("scroll", function () {
     var imgContainer = document.querySelector(".imgContainer");
     var AboutMeInfoContainer = document.querySelector(".AboutMeInfoContainer");
@@ -18,77 +23,117 @@ const AboutMe = () => {
     }
   });
 
-  // useEffect(()=>{
-
-  // },[])
   return (
     <>
       <a name="aboutMe"></a>
-      <section className="aboutMeContainer" id="aboutMe">
+        <div className="titlesContainer"  id="aboutMe">
+            <h3 className="skillsTitle">
+            <i className="fa-solid fa-minus minusIcon"></i>
+              {AppText.AboutMe.title[language]}
+            <i className="fa-solid fa-minus minusIcon"></i>
+            </h3>
+            <h2 className="questionsTitle">Luis E. Ramírez C.</h2>
+          </div>
+      <section className="aboutMeContainer">
         <div className="imgContainer">
           <img src={aboutMeImg} alt="" />
         </div>
         <div className="AboutMeInfoContainer">
-          <p className="aboutMeMessage">
-            My name is Luis Eduardo Ramirez C. I am passionate about code, I
-            think that not everyone has the happiness of working on what they
-            like, so I feel lucky, I like the challenges that programming offers
-            and knowing that every day I will learn something new.
-          </p>
 
           <ul className="aboutMeList">
+            {/* <!-- Degree --> */}
             <li>
-              {/* <!-- location --> */}
-              <span className="about-info-logo">
-                <i className="fas fa-map-marker-alt" aria-hidden="true"></i>
+              <span>
+                <i className="fas fa-graduation-cap" aria-hidden="true"></i>
               </span>
               <span>
-                <b>Location:</b>Santo Domingo, Republica Dominicana
+                <b>{AppText.AboutMe.degreeTitle[language]}:</b>{AppText.AboutMe.degreeContent[language]}
+              </span>
+            </li>
+            {/* <!-- Experience --> */}
+            <li>
+              <span>
+                <i className="fa-solid fa-laptop-code"></i>
+              </span>
+              <span>
+                <b>{AppText.AboutMe.experienceTitle[language]}:</b> 
+                {AppText.AboutMe.experienceContent[language]}
+              </span>
+            </li>
+            {/* <!-- Languages --> */}
+            <li>
+              <span>
+                <i className="fa-solid fa-language"></i>
+              </span>
+              <span>
+                <b>{AppText.AboutMe.languagesTitle[language]}:</b>
+                {AppText.AboutMe.languagesContent[language]}
               </span>
             </li>
             {/* <!-- interests --> */}
             <li>
-              <span className="about-info-logo">
+              <span>
                 <i className="fas fa-gamepad" aria-hidden="true"></i>
               </span>
               <span>
-                <b>Interests:</b>Motocross, Excercise, Nature
-              </span>
-            </li>
-            {/* <!-- study --> */}
-            <li>
-              <span className="about-info-logo">
-                <i className="fas fa-school" aria-hidden="true"></i>
-              </span>
-              <span>
-                <b>Study:</b>Academlo
-              </span>
-            </li>
-            {/* <!-- degree --> */}
-            <li>
-              <span className="about-info-logo">
-                <i className="fas fa-graduation-cap" aria-hidden="true"></i>
-              </span>
-              <span>
-                <b>Degree:</b>systems and computer engineer
-              </span>
-            </li>
-            {/* <!-- mail --> */}
-            <li>
-              <span className="about-info-logo">
-                <i className="fas fa-envelope" aria-hidden="true"></i>
-              </span>
-              <span>
-                <b>Mail:</b>lerc7689@hotmail.com{" "}
-              </span>
-            </li>
-            {/* <!-- phone --> */}
-            <li>
-              <span className="about-info-logo">
-                <i className="fas fa-phone-alt" aria-hidden="true"></i>
-              </span>
-              <span>
-                <b>Phone:</b>829-721-3784
+                <b>{AppText.AboutMe.hobbiesTitle[language]}:</b>
+                  <table style={{
+                  display:"flex",
+                  flexDirection:"column",
+                  gap:"0.3rem",
+                  paddingTop:"0.5rem"
+                }}>
+                  <tbody>
+                    <tr>
+                      <td>
+                      <span> 
+                        <i className="fa-solid fa-motorcycle" aria-hidden="true" style={{
+                            color:"darkblue"
+                          }}></i> 
+                      </span>
+                      </td>
+                      <td>
+                        {AppText.AboutMe.hobbiesContent1[language]}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>
+                          <i className="fa-solid fa-dumbbell" aria-hidden="true" style={{
+                            color:"lightblue"
+                          }}></i>
+                        </span>
+                      </td>
+                      <td>
+                        {AppText.AboutMe.hobbiesContent2[language]}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <span>
+                        <i className="fa-solid fa-tree" aria-hidden="true" style={{
+                          color:"green"
+                        }}></i>
+                      </span>
+                      </td>
+                      <td>
+                        {AppText.AboutMe.hobbiesContent3[language]}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span>                          
+                          <i className="fa-solid fa-paw" style={{
+                            color:"purple"
+                          }}></i>
+                        </span>
+                      </td>
+                      <td>
+                        {AppText.AboutMe.hobbiesContent4[language]}
+                      </td>
+                    </tr>
+                    </tbody>
+                  </table>
               </span>
             </li>
           </ul>
