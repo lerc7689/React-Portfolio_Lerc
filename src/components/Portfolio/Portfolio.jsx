@@ -32,7 +32,7 @@ const Portfolio = () => {
       name: "CountryApp_Angular",
       img: country_app_angular,
       github: "https://github.com/lerc7689/Angular-Countries_App.git",
-      demo: "https://country-app-angular-lerc.netlify.app/countries/by-capital",
+      demo: "https://country-app-angular-lerc.netlify.app/",
       tech: "Angular"
     },
     {
