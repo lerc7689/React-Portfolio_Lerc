@@ -120,7 +120,7 @@
     width: 150px;
     height: 40px;
     overflow: hidden;
-    position: fixed;
+    position: absolute;
     z-index: 10;
     right: 10px;
     bottom: 20px;
