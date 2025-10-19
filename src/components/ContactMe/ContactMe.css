@@ -147,6 +147,9 @@ textarea:focus {
 }
 
 @media (min-width: 320px) and (max-width: 830px) {
+  .contactMeContainer {
+    opacity: 1;
+  }
   .contactMeTitle {
   font-size: 20px;
   }
