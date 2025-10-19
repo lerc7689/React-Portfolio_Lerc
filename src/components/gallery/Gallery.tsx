@@ -1,4 +1,3 @@
-import ProjectGallery from "../ProjectGallery/ProjectGallery";
 import sivanaImg from "../../assets/img/imgProjects/Sivana.png";
 import EtreeLeafImg from "../../assets/img/imgProjects/EtreeLeaf.png";
 import tomsLogin from "../../assets/img/imgProjects/Toms/login.png";
@@ -12,6 +11,7 @@ import "./Gallery.css"
 import { useState } from "react";
 import { AppText } from "../../utils/AppText";
 import { useApp } from "../../context/AppContext";
+import ProjectGallery from '../projectGallery/ProjectGallery';
 
 
 /* Ejemplo con 3 proyectos y 3 imágenes cada uno */
