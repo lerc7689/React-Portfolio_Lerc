@@ -47,7 +47,7 @@ export const AppText = {
   //Other projects
   otherProjects: {
       title: ["Otros Proyectos", "Other Projects"],
-      subtitle:["imágenes de Otros Trabajos", "Images of Other Works"]
+      subtitle:["Imágenes de Otros Trabajos", "Images of Other Works"]
   },
     //Contact me
   ContactMe: {
