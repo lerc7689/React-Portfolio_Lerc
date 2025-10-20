@@ -40,7 +40,7 @@ useEffect(() => {
       <AboutMe/>
       <Skills/>
       <Portfolio/>
-      <Gallery/>
+      {/* <Gallery/> */}
       <ContactMe/>
       <Footer/>
     </div>

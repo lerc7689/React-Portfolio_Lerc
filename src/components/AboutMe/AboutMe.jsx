@@ -24,9 +24,9 @@ const AboutMe = () => {
   });
 
   return (
-    <>
+    <div className="aboutMeContainer" id="aboutMe" >
       <a name="aboutMe"></a>
-        <div className="titlesContainer"  id="aboutMe">
+        <div className="titlesContainer">
             <h3 className="skillsTitle">
             <i className="fa-solid fa-minus minusIcon"></i>
               {AppText.AboutMe.title[language]}
@@ -34,7 +34,7 @@ const AboutMe = () => {
             </h3>
             <h2 className="questionsTitle">Luis E. Ramírez C.</h2>
           </div>
-      <section className="aboutMeContainer">
+      <section className="aboutMeContainerinfo">
         <div className="imgContainer">
           <img src={aboutMeImg} alt="" />
         </div>
@@ -88,7 +88,7 @@ const AboutMe = () => {
                       <td>
                       <span> 
                         <i className="fa-solid fa-motorcycle" aria-hidden="true" style={{
-                            color:"darkblue"
+                            color:"darkRed"
                           }}></i> 
                       </span>
                       </td>
@@ -139,7 +139,7 @@ const AboutMe = () => {
           </ul>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -8,7 +8,8 @@ import country_app_angular from "../../assets/img/imgProjects/country_app_angula
 import pipes_angular from "../../assets/img/imgProjects/pipes_angular.png";
 import { useApp } from "../../context/AppContext";
 import { AppText } from "../../utils/AppText";
-import Carousel from "../carrusel/Carousel";
+import Carousel from "../carrusel/Carousel"
+import Gallery from "../gallery/Gallery"
 
 const Portfolio = () => {
   const { language } = useApp();
@@ -65,6 +66,7 @@ const Portfolio = () => {
   ];
 
   return (
+    <>
     <section className="portfolio" id="portfolio">
       <a name="portfolio"></a>
       <div className="titlesContainer">
@@ -81,6 +83,9 @@ const Portfolio = () => {
       {/* Carrusel dinámico con hover */}
       <Carousel projects={projects} />
     </section>
+      <Gallery/>
+
+    </>
   );
 };
 
