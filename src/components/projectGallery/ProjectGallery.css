@@ -50,7 +50,8 @@
 .pg-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr); /* 6 columnas por defecto */
-  height: 550px;
+  /* max-height: 550px; */
+  height: auto;
   gap: 1rem;
   align-items: stretch;
   transition: opacity 0.25s ease, transform 0.25s ease;
