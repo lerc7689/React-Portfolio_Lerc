@@ -6,6 +6,19 @@ import overview from "../../assets/img/imgProjects/Toms/overview.png";
 import simplyfund1 from "../../assets/img/imgProjects/Simplyfund/Simplyfund1.png";
 import simplyfund2 from "../../assets/img/imgProjects/Simplyfund/Simplyfund2.png";
 import simplyfund3 from "../../assets/img/imgProjects/Simplyfund/Simplyfund3.png";
+// Facturacion electrónica 1
+import eBilling1 from "../../assets/img/imgProjects/Facturacion_electronica_1/login.png";
+import eBilling2 from "../../assets/img/imgProjects/Facturacion_electronica_1/asociados.png";
+import eBilling3 from "../../assets/img/imgProjects/Facturacion_electronica_1/asociados2.png";
+import eBilling4 from "../../assets/img/imgProjects/Facturacion_electronica_1/consulta_factura.png";
+import eBilling5 from "../../assets/img/imgProjects/Facturacion_electronica_1/filtros_avanzados.png";
+// Facturacion electrónica 2
+import eBilling6 from "../../assets/img/imgProjects/Facturacion_electronica_2/login.png";
+import eBilling7 from "../../assets/img/imgProjects/Facturacion_electronica_2/inicio.png";
+import eBilling8 from "../../assets/img/imgProjects/Facturacion_electronica_2/metricas.png";
+import eBilling9 from "../../assets/img/imgProjects/Facturacion_electronica_2/asociados.png";
+import eBilling10 from "../../assets/img/imgProjects/Facturacion_electronica_2/asociados_2.png";
+
 
 import "./Gallery.css"
 import { useState } from "react";
@@ -16,6 +29,25 @@ import ProjectGallery from '../projectGallery/ProjectGallery';
 
 /* Ejemplo con 3 proyectos y 3 imágenes cada uno */
 const projects = [
+    {
+    name: "E-Billing 1",
+    images: [
+      { src: eBilling1 },
+      { src: eBilling2 },
+      { src: eBilling3 },
+      { src: eBilling4 },
+      { src: eBilling5 },
+    ],
+  },
+  {
+    name: "E-Billing 2",
+    images: [
+      { src: eBilling6 },
+      { src: eBilling7 },
+      { src: eBilling8 },
+      { src: eBilling9 },
+    ],
+  },
   {
     name: "Sivana",
     images: [

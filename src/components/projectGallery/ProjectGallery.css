@@ -50,6 +50,7 @@
 .pg-grid {
   display: grid;
   grid-template-columns: repeat(8, 1fr); /* 6 columnas por defecto */
+  height: 550px;
   gap: 1rem;
   align-items: stretch;
   transition: opacity 0.25s ease, transform 0.25s ease;
@@ -118,6 +119,7 @@
 @media (max-width: 990px) {
   .pg-grid {
     grid-template-columns: repeat(4, 1fr); /* 6 columnas por defecto */
+    height: auto;
   }
 
   .pg-caption {
