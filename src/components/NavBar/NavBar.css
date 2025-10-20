@@ -157,6 +157,7 @@ i {
   .headerList i {
     font-size: 15px;
   }
+
   .ShortHeaderContainer {
     padding: 10px;
     /* height: 75%; */
@@ -204,12 +205,12 @@ i {
   }
   .ShortHeaderContainer {
     height: 45%;
-    width: 30px;
+    width: 40px;
     padding: 5px;
   }
 
   .active i {
-    padding: 2px;
+    padding: 5px;
   }
   .flagIcon{
     width: 20px;
