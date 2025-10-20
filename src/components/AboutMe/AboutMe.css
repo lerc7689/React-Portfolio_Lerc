@@ -100,6 +100,9 @@
     margin-bottom: 60px;
     flex-direction: column;
   }
+  .aboutMeContainerinfo{
+    flex-direction: column;
+  }
   .imgContainer {
     width: 200px;
   }

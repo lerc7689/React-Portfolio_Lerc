@@ -96,7 +96,7 @@
 
 @media (min-width: 320px) and (max-width: 617px) {
   .FooterContainer {
-    height: 20vh;
+    height: 15vh;
     padding-left: 10px;
     padding-right: 10px;
   }
