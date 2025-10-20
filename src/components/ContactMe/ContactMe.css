@@ -140,10 +140,10 @@ textarea:focus {
 }
 
 .contactInfo-icons-text p:nth-child(1){
-  font-size: 20px;
+  font-size: 18px;
 }
 .contactInfo-icons-text p:nth-child(2){
-  font-size: 18px;
+  font-size: 16px;
 }
 
 @media (min-width: 320px) and (max-width: 830px) {
