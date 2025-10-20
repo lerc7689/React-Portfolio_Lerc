@@ -1,25 +1,30 @@
 import React from "react";
 import "./JobTimeline.css";
+import { AppText } from "../../utils/AppText";
+import { useApp } from "../../context/AppContext";
+
 
 const JobTimeline = () => {
+  const {language} = useApp()
+
   const experiences = [
     {
       company: "E-treeleaf",
       role: "Frontend Developer",
-      period: "Oct 2023 - Presente",
-      description: "Desarrollo de interfaces con React y optimización de UI/UX.",
+      period: AppText.JobExpirience.etreeleaf.period[language],
+      description: AppText.JobExpirience.etreeleaf.description[language],
     },
     {
       company: "Freelance",
       role: "Frontend Developer",
       period: "2023 - 2025",
-      description: "Desarrollo de interfaces con React, React Native y mantenimiento de módulos en Angular.",
+      description: AppText.JobExpirience.freelance.description[language],
     }
   ];
 
   return (
     <div className="timeline-container">
-      <h2 className="timeline-title">Job Experience</h2>
+      <h2 className="timeline-title">{AppText.JobExpirience.title[language]}</h2>
       <div className="timeline">
         {experiences.map((exp, index) => (
           <div className="timeline-item" key={index}>
@@ -38,3 +43,4 @@ const JobTimeline = () => {
 };
 
 export default JobTimeline;
+

@@ -39,15 +39,27 @@ export const AppText = {
       frontendTitle: ["Habilidades Frontend", "Frontend Skills"],
       backendTitle: ["Habilidades Backend", "Backend Skills"],
   },
+    //JobExpirience
+  JobExpirience:{
+    title:["Experiencia Laboral", "Job Experience"],
+    etreeleaf:{
+      period:["Oct 2023 - Presente", "Oct 2023 - Present"],
+      description:["Desarrollo de interfaces con React y optimización de UI/UX.", "Interface development with React and UI/UX optimization."]
+    },
+    freelance:{
+      description:["Desarrollo de interfaces con React, React Native y mantenimiento de módulos en Angular.","Interface development with React, React Native, and module maintenance in Angular."]
+    }
+  },
     //Portfolio
   Portfolio: {
       title: ["Desarrollos Personales", "Personal Developments"],
-      subtitle:["Proyectos Interactivos", "Interactive Projects"]
+      subtitle:["Proyectos Interactivos", "Interactive Projects"],
   },
   //Other projects
   otherProjects: {
       title: ["Proyectos Profesionaless", "Professional Projects"],
-      subtitle:["Imágenes de Otros Trabajos", "Images of Other Works"]
+      subtitle:["Imágenes de Otros Trabajos", "Images of Other Works"],
+      allButtonTitle:["Todo", "All"]
   },
     //Contact me
   ContactMe: {

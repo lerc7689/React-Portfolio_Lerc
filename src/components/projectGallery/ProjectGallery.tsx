@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./ProjectGallery.css";
+import { AppText } from "../../utils/AppText";
+import { useApp } from "../../context/AppContext";
 
 const ProjectGallery = ({ projects = [], toggle }) => {
   const [selectedProject, setSelectedProject] = useState("All");
   const [displayImages, setDisplayImages] = useState([]);
   const [isFading, setIsFading] = useState(false);
+  const {language} = useApp()
 
   // Cuando cambie el projects o el filtro, actualizamos las imágenes a mostrar
   useEffect(() => {
@@ -42,7 +45,7 @@ const ProjectGallery = ({ projects = [], toggle }) => {
           className={`pg-filter-btn ${selectedProject === "All" ? "active" : ""}`}
           onClick={() => setSelectedProject("All")}
         >
-          All
+          {AppText.otherProjects.allButtonTitle[language]}
         </button>
 
         {projectNames.map((name) => (
