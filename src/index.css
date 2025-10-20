@@ -16,7 +16,7 @@ body {
 
 .darkMode {
   background-color: #000000ee;
-  color: white;
+  color: lightgray;
 }
 
 :root{
