@@ -96,4 +96,9 @@
   .timeline-item {
     padding-left: 25px;
   }
+
+  .timeline-dot {
+    position: absolute;
+    left: -9px;
+  }
 }

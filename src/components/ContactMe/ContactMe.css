@@ -160,6 +160,12 @@ textarea:focus {
   .contactFormAndInfoContainer{
     flex-direction: column;
   }
+  .contactInfo-icons-text p:nth-child(1){
+    font-size: 16px;
+  }
+  .contactInfo-icons-text p:nth-child(2){
+    font-size: 14px;
+  }
   .contactMeContainer form {
     width: 100%;
   }
