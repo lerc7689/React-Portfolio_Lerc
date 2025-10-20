@@ -62,7 +62,9 @@ const Portfolio = () => {
   return (
     <section id="gallery-container">
       {/* <h2 style={{ color: "#fff", textAlign: "center", marginTop: "1rem" }}>Portfolio</h2>*/}
-      <div className="titlesContainer">
+      <div className="titlesContainer" style={{
+        marginBottom:"3rem"
+      }}>
         <h3 className="portfolioTitle">
           <i className="fa-solid fa-minus minusIcon"></i>
             {AppText.otherProjects.title[language]}
