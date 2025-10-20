@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .aboutMeContainer {
-  width: 80vw;
+  width: 90vw;
   position: relative;
   display: flex;
   justify-content: center;
@@ -27,7 +27,9 @@
   display: flex;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
   width: 100%;
+
 }
 .imgContainer {
   width: 400px;
