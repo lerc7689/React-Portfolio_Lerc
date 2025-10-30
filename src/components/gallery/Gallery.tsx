@@ -3,6 +3,7 @@ import EtreeLeafImg from "../../assets/img/imgProjects/EtreeLeaf.png";
 import tomsLogin from "../../assets/img/imgProjects/Toms/login.png";
 import networks from "../../assets/img/imgProjects/Toms/networks.png";
 import overview from "../../assets/img/imgProjects/Toms/overview.png";
+import taxFinder from "../../assets/img/imgProjects/Toms/taxFinder.png";
 import simplyfund1 from "../../assets/img/imgProjects/Simplyfund/Simplyfund1.png";
 import simplyfund2 from "../../assets/img/imgProjects/Simplyfund/Simplyfund2.png";
 import simplyfund3 from "../../assets/img/imgProjects/Simplyfund/Simplyfund3.png";
@@ -67,6 +68,7 @@ const projects = [
       { src: tomsLogin },
       { src: networks },
       { src: overview },
+      { src: taxFinder },
     ],
   },
   {
