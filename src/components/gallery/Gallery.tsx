@@ -4,9 +4,9 @@ import tomsLogin from "../../assets/img/imgProjects/Toms/login.png";
 import networks from "../../assets/img/imgProjects/Toms/networks.png";
 import overview from "../../assets/img/imgProjects/Toms/overview.png";
 import taxFinder from "../../assets/img/imgProjects/Toms/taxFinder.png";
-import simplyfund1 from "../../assets/img/imgProjects/Simplyfund/Simplyfund1.png";
-import simplyfund2 from "../../assets/img/imgProjects/Simplyfund/Simplyfund2.png";
-import simplyfund3 from "../../assets/img/imgProjects/Simplyfund/Simplyfund3.png";
+// import simplyfund1 from "../../assets/img/imgProjects/Simplyfund/Simplyfund1.png";
+// import simplyfund2 from "../../assets/img/imgProjects/Simplyfund/Simplyfund2.png";
+// import simplyfund3 from "../../assets/img/imgProjects/Simplyfund/Simplyfund3.png";
 // Facturacion electrónica 1
 import eBilling1 from "../../assets/img/imgProjects/Facturacion_electronica_1/login.png";
 import eBilling2 from "../../assets/img/imgProjects/Facturacion_electronica_1/asociados.png";
@@ -71,14 +71,14 @@ const projects = [
       { src: taxFinder },
     ],
   },
-  {
-    name: "Simplyfund",
-    images: [
-      { src: simplyfund1 },
-      { src: simplyfund2 },
-      { src: simplyfund3 },
-    ],
-  },
+  // {
+  //   name: "Simplyfund",
+  //   images: [
+  //     { src: simplyfund1 },
+  //     { src: simplyfund2 },
+  //     { src: simplyfund3 },
+  //   ],
+  // },
 ];
 
 // Uso dentro de Portfolio.jsx (ejemplo)
@@ -96,7 +96,6 @@ const Portfolio = () => {
 
   return (
     <section id="gallery-container">
-      {/* <h2 style={{ color: "#fff", textAlign: "center", marginTop: "1rem" }}>Portfolio</h2>*/}
       <div className="titlesContainer" style={{
         marginBottom:"3rem"
       }}>
