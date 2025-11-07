@@ -32,9 +32,8 @@
 }
 
 .close-icon:hover{
-    height: 45px;
-    width: 45px;
-    color: rgb(215, 213, 213);
+    height: 35px;
+    width: 35px;
     background-color: #ff8903;
     transition: 0.2s ease-in-out;
 

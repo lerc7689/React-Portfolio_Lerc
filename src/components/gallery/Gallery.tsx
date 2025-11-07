@@ -112,9 +112,9 @@ const Portfolio = () => {
       <ProjectGallery projects={projects}  toggle={modalToggle} />
 
       {isOpenModal && (
-        <div className="img-wide-view">
+        <div className="img-wide-view" onClick={() => setisOpenModal(false)}>
           <div className="close-icon" onClick={()=> setisOpenModal(false)}>X</div>
-          <img src={selectedImg} alt="" />
+          <img src={selectedImg} alt="" onClick={(e) => e.stopPropagation()} />
         </div>
       )}
     </section>
