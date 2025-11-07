@@ -69,7 +69,7 @@ input::placeholder,textarea::placeholder{
 
 .contactFormAndInfoContainer input:focus,
 textarea:focus {
-  border: 1px solid var(--primary-yellow);
+  border: 1.7px solid var(--primary-yellow);
   outline: none;
 }
 
