@@ -1,5 +1,5 @@
 import "./Home.css";
-import homeImgContainer from "../../assets/img/homeImg.png";
+import homeImgContainer from "../../assets/img/homeImg.webp";
 import { AppText } from "../../utils/AppText";
 import { useApp } from "../../context/AppContext";
 
